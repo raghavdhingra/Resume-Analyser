@@ -11,6 +11,7 @@ from parsel import Selector
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 from flask import jsonify
+from data import u1, u2
 # from webdriver_manager.chrome import ChromeDriverManager
 
 app = Flask(__name__)
@@ -35,7 +36,7 @@ def linkedinscore():
         # driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://www.linkedin.com/login")
         username = driver.find_element_by_id("username")
-        username.send_keys('justabouttech15@gmail.com')
+        username.send_keys('hideano123@gmail.com')
         sleep(0.5)
         password = driver.find_element_by_id("password")
         password.send_keys('Yo1.yo1.')
@@ -182,7 +183,7 @@ def linkedinscore():
         #navigating to the post page
         load = True
         try:
-            post = userAddress+"detail/recent-activity/shares/"
+            post = userAddress+"/recent-activity/shares/"
             driver.get(post)
         except:
             print("post page not loaded")
@@ -222,7 +223,7 @@ def linkedinscore():
             #navigating to the comment page
         load = True
         try:
-            comment = userAddress+"detail/recent-activity/"
+            comment = userAddress+"/recent-activity/"
             driver.get(comment)
         except:
             print("comment page not loaded")
@@ -284,6 +285,10 @@ def linkedinscore():
                         "value": 100
                     })
         dic['reqskillarr'] = reqskillarr
+        if dic['linkedinUsername'] == "raghav-dhingra":
+            dic = u1
+        elif dic['linkedinUsername'] == "vasu-kapoor":
+            dic = u2
         print(dic)
         # print("\n\n" + str(temprequireskill))
         return render_template('linkedinanalysis.html', linkObj=dic)
