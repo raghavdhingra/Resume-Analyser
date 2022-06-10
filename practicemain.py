@@ -33,13 +33,13 @@ def linkedinscore():
         #SCRAPER CODE BEGINS
         chromedriver = "./chromedriver"
         driver = webdriver.Chrome(chromedriver)
-        # driver = webdriver.Chrome(ChromeDriverManager().install())
+
         driver.get("https://www.linkedin.com/login")
         username = driver.find_element_by_id("username")
-        username.send_keys('hideano123@gmail.com')
+        username.send_keys('xofitfab@gmail.com')
         sleep(0.5)
         password = driver.find_element_by_id("password")
-        password.send_keys('Yo1.yo1.')
+        password.send_keys('xofitfab9876')
         sleep(0.5)
         log_in_button = driver.find_element_by_class_name("btn__primary--large")
         log_in_button.click()

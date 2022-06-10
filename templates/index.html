@@ -33,6 +33,15 @@
       href="{{ url_for('static', filename='css/style.css') }}"
       rel="stylesheet"
     />
+
+    <style>
+      .mz-module-button {
+        background-color: #1a73e8;
+        border-radius: 5px;
+        color: #fff;
+        border-color: #fff;
+      }
+    </style>
   </head>
   <body id="page-top">
     <!-- Navigation -->
@@ -68,7 +77,7 @@
     <!-- Header -->
     <header></header>
 
-    <section id="about" class="light-bg" style="background-color: lightblue">
+    <section id="about" class="light-bg" style="background-color: purple">
       <div id="particles-js"></div>
       <script
         type="text/javascript"
@@ -78,8 +87,10 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-title">
-              <h2>Profile Inspector</h2>
-              <p>
+              <h1 style="color: #fff; font-weight: bold; font-size: 5rem">
+                <i class="fa fa-search"></i> Profile Inspector
+              </h1>
+              <p style="color: #fff">
                 <strong
                   >A Single Place to get all your analytics done right!</strong
                 >
@@ -92,9 +103,9 @@
 
           <div class="col-md-4 text-center">
             <div class="mz-module">
-              <div class="mz-module-about">
-                <i class="fa fa-github fa-5x"></i>
-                <h3>Github</h3>
+              <div class="mz-module-about" style="border-radius: 5px">
+                <i class="fa fa-github" style="font-size: 15rem"></i>
+                <h2 style="font-size: 4rem; font-weight: bold">Github</h2>
               </div>
               <a href="/github">
                 <button
@@ -114,9 +125,9 @@
 
           <div class="col-md-4 text-center">
             <div class="mz-module">
-              <div class="mz-module-about">
-                <i class="fa fa-linkedin fa-5x"></i>
-                <h3>Linkedin</h3>
+              <div class="mz-module-about" style="border-radius: 5px">
+                <i class="fa fa-linkedin fa-5x" style="font-size: 15rem"></i>
+                <h2 style="font-size: 4rem; font-weight: bold">Linkedin</h2>
               </div>
               <a href="/linkedin">
                 <button
@@ -133,18 +144,12 @@
           </div>
           <div class="col-md-4 text-center">
             <div class="mz-module">
-              <div class="mz-module-about">
-                <i class="fa fa-file fa-5x"></i>
-                <h3>Resume</h3>
+              <div class="mz-module-about" style="border-radius: 5px">
+                <i class="fa fa-file fa-5x" style="font-size: 15rem"></i>
+                <h2 style="font-size: 4rem; font-weight: bold">Resume</h2>
               </div>
               <a href="/resume">
-                <button
-                  id="picture-button"
-                  name="submit"
-                  value="resume"
-                  style="width: 100%"
-                  class="mz-module-button"
-                >
+                <button style="width: 100%" class="mz-module-button">
                   Resume
                 </button>
               </a>
